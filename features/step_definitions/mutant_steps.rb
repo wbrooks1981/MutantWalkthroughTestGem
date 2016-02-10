@@ -1,5 +1,5 @@
 Given(/^I have a mutant$/) do
-  @mutant = Mutant.new real_name: 'A', mutant_name: 'Tester', power: 'C'
+  @mutant = MutantFactory.build(:wolverine)
   expect(@mutant.save).to be_an(Hash)
 end
 
